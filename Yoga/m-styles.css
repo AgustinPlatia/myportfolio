@@ -1,0 +1,513 @@
+*{                          /* No es lo mismo poner * que html | Las propiedades que pongo aca se aplican en todos los elementos */
+    margin:0px;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#FEFCF3;
+    font-family: 'Quicksand', sans-serif;
+    display:flex;
+    flex-flow:column;
+    flex-wrap:nowrap;
+    /* Cuando pongo "display:flex;" hago que el contenido dentro de "body", por default se muestre uno al lado del otro, por lo tanto tengo que poner las otras 2 propiedades, "flex-flow:column;" y "flex-wrap:nowrap;" */
+}
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-header{
+            background-color:#FEFCF3;
+            display:flex;
+            position:sticky;      /* "possition:sticky" en el "header" hace que el "header" se quede pegado en la parte "top:0px;" de la pagina, cuando hago scroll para abajo*/
+            height:70px;          /* 70 es el default o minimo. poner 70 como margin-top en los divs hacia donde te tpea asi el header no lo tapa */
+            top:0px;
+            padding-bottom:0px;
+}
+    
+        #menu{
+            background-color:#FEFCF3;
+            display:flex;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            flex-basis:100%;
+            height:60px;
+            align-items:center;         /* esta propiedad hace que las cajas que estan dentro de menu, se posicionen en el centro de la caja, no al principio */
+            border-bottom:2px solid rgba(216, 170, 216, 0.5); /* el 0.5 es el degradado / transparentado / alpha como el crosshair */
+        }
+
+            a{
+                color:rgb(43, 43, 43);
+                text-transform: uppercase;
+                font-weight:bold;
+                letter-spacing: 2px;
+                padding:0 10px;          /* El 0 indica el pading arriba y abajo y el 10 indica a los costados */
+                text-decoration: none;
+                transition:.6s;
+            }
+
+            a:hover{
+                color:rgb(216, 170, 216);
+                transition:.2s;
+            }
+
+            .nav{
+                /*background:#E0C097;*/
+                flex: 5 1 auto;         /* Al poner 5 hago que la clase nav sea 5 veces mas grande en tamaño */
+                display:flex;
+                justify-content:space-evenly;
+            }
+
+            .social{
+                /*background:#E0C097;*/
+                flex: 1 1 auto;
+                display:flex;           /*"display:flex;" lo modifica de uno arriba del otro a uno al lado del otro */
+            }            
+
+            .social a{                  /* Sacar esto, nose cual es la difference */
+                font-size:18px;
+                padding:0 5px;
+            }
+
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-section-1{
+    display:flex;
+}
+
+            #divl{
+                border-radius:5px;
+                margin-top:70px;
+                width:600px;
+                height:600px;
+                float:left;
+            }
+
+            #divmid{
+                background-image:url(imagenes/postura-2.jpeg);
+                background-size:cover;
+                background-position:center;
+                border-top-left-radius: 250px 200px;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 250px 200px;
+                margin-top:70px;
+                width:600px;
+                height:700px;
+                float:left;
+            }
+
+            #divr{
+                background-image:url(imagenes/postura-3.jpeg);
+                background-size:cover;
+                background-position:center;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 250px 200px;
+                border-bottom-right-radius: 250px 200px;
+                margin-top:70px;
+                width:643px;
+                height:700px;
+                float:left;
+            }
+
+            .myh2{
+                color:rgb(216, 170, 216);
+                margin:0px;
+                font-weight:bold;
+            }
+
+            .thep{
+                color:rgb(43, 43, 43);
+                font-weight:bold;
+                margin:0px;
+                display:flex;
+                justify-content:center;
+            }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-section-2{
+            display:flex;
+}
+
+            #trayectoria{
+                flex-basis:100%;
+                margin-top:70px;
+            }
+
+            .myh3{
+                color:rgb(216, 170, 216);
+                display:flex;
+                justify-content:center;
+                font-weight:bold;
+                margin:0px;
+            }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-section-3{
+            /*background-color:#323232;*/
+            display:block;
+}
+
+            #jornadasholisticas{
+                /*background-color:#343a40;*/
+                display:block;
+                margin-top:70px;
+            }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+            #id-carousel-1{
+                width:600px;
+                float:left;
+            }
+
+            .pic0{
+                background-image:url(imagenes/losreartes-1.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+            .pic1{
+                background-image:url(imagenes/losreartes-2.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+            .pic2{
+                background-image:url(imagenes/losreartes-3.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+            #id-carousel-2{
+                width:600px;
+                float:left;
+            }
+
+            .pic3{
+                background-image:url(imagenes/agua-de-oro-1.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+            .pic4{
+                background-image:url(imagenes/agua-de-oro-2.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+            .pic5{
+                background-image:url(imagenes/postura-1.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+            #id-carousel-3{
+                width:600px;
+                float:left;
+            }
+
+            .pic6{
+                background-image:url(imagenes/escuela-1.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+            .pic7{
+                background-image:url(imagenes/postura-5.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+            .pic8{
+                background-image:url(imagenes/postura-7.jpeg);
+                background-size:cover;
+                background-position:center;
+                width:540px;
+                height:430px;
+            }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+            .img-height{
+                width:100%;
+                height:430px;
+            }
+
+
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+    
+#id-section-4{
+            background:#f7f7f7;
+            display:flex;                   /* "display:flex;" por defecto tiene "flow-direction:row;" */
+    }
+
+        .articulos{
+            background:#f7f7f7;
+            display:flex;
+            flex-flow:row;
+            flex-wrap:wrap;
+            flex:2 1 auto;              /* Creo que este flex no tiene sentido, no hace nada */
+        }
+
+            .clase-article{
+                flex:1 1 45%;           /* como articulos tiene la propiedad "flex-wrap:wrap;" las cajas con "clase-article" se acomodan una debajo de la otra.
+                En la propiedad flex el primer 1 es el flex-grow, mientras mas el numero, mas espacio ocupa. El segundo 1 es el flex-shrink, indica que mantiene esa medida. El porcentaje es el flex-basis, indica que tanto tamaño (width) va a ocupar en la caja en donde esta */
+                color:#323232;
+                font-size:15px;
+                letter-spacing:1px;
+                margin:10px;             /* Si el fondo tiene color distinto se nota si hay margin, pero como los fondos son del mismo color le saco el margin */
+                background:#ececec;
+            }
+
+            .clase-article a{
+                color:#fff;
+                font-size:13px;
+                padding:10px;
+                background:#323232;
+                margin-left:10px;
+                display:inline-block;
+            }
+
+            .clase-article img{
+                width:100%;
+            }
+
+            .theh3{
+                color:#fff;
+                font-size:15px;
+                margin-top:-80px;
+                padding:10px 10px 10px 14px;   /* Recordar: el 1er valor -> Arriba, el 2do -> Derecha, el 3ro -> Abajo, el 4to -> Izquierda */
+            }
+
+            .theh2{
+                color:#fff;
+                font-size:20px;
+                text-transform:uppercase;
+                padding:0px 0px 10px 14px;     /* Recordar: el 1er valor -> Arriba, el 2do -> Derecha, el 3ro -> Abajo, el 4to -> Izquierda */
+            }
+
+            .navigation{
+                background:#E0C097;
+                flex:1 1 100%;          /* al ponerle 100% indico que ocupe el 100% del width de la caja en donde esta, en este caso esta en la caja articulos */
+                margin:10px;
+            }
+            
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/            
+
+    .clase-footer{
+        background:#F58840;
+        display:flex;
+        justify-content:center;
+    }
+
+        .pie{
+            background:#E0C097;
+            width:300px;
+        }
+
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+@media all and (max-width: 1630px){
+    
+    #id-section-3{
+        display:flex;
+        flex-wrap:wrap;
+    }
+
+    #id-carousel-1{
+        display:flex;
+        flex-wrap:wrap;
+        float:none;
+    }
+
+    #id-carousel-2{
+        display:flex;
+        flex-wrap:wrap;
+        float:none;
+    }
+
+    #id-carousel-3{
+        display:flex;
+        flex-wrap:wrap;
+        float:none;
+    }
+}
+
+@media all and (max-width: 1475px){
+
+    /* #divl{
+        border-radius:5px;
+        margin-top:70px;
+        width:600px;
+        height:600px;
+        float:left;
+    } */
+
+    #divl{
+        display:block;
+        flex-basis:70%;
+        flex-shrink:1;
+        flex-grow:1;
+        flex-wrap:nowrap;
+    }
+
+    /* #divmid{
+        background-image:url(imagenes/postura-2.jpeg);
+        background-size:cover;
+        background-position:center;
+        border-top-left-radius: 250px 200px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 250px 200px;
+        margin-top:70px;
+        width:600px;
+        height:700px;
+        float:left;
+    } */
+
+    #divmid{
+        display:flex;
+        flex-grow:1;
+        flex-shrink:1;
+        flex-wrap:wrap;
+        float:none;
+    }
+
+    /* #divr{
+        background-image:url(imagenes/postura-3.jpeg);
+        background-size:cover;
+        background-position:center;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 250px 200px;
+        border-bottom-right-radius: 250px 200px;
+        margin-top:70px;
+        width:643px;
+        height:700px;
+        float:left;
+    } */
+
+    #divr{
+        display:flex;
+        flex-grow:1;
+        flex-shrink:1;
+        flex-wrap:wrap;
+    }
+}
+
+@media all and (max-width: 1227px){
+
+    #id-section-1{
+        display:block;
+    }
+
+    /* #divl{
+        border-radius:5px;
+        margin-top:70px;
+        width:600px;
+        height:600px;
+        float:left;
+    } */
+
+    #divl{
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+    }
+
+    #divmid{
+        display:block;
+        float:left;
+        width:390px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #divr{
+        display:block;
+        float:left;
+        width:390px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+
+@media all and (max-width: 842px){
+    #menu{
+        flex-direction:column;
+    }
+
+                        /*
+                        display:flex;
+                        flex-wrap:nowrap;
+                        flex-direction:row;
+                        flex-basis:100%;
+                        height:60px;
+                        align-items:center;
+                        border-bottom:2px solid rgba(216, 170, 216, 0.5); */
+
+    .nav{
+        flex-direction:column;
+    }
+
+                        /* 
+                        flex: 5 1 auto;
+                        display:flex;
+                        justify-content:space-evenly; */
+}
+
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction:column;
+    }
+}
+
+/* RESPONSIVE PART 3 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 3 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 3 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 3 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 3 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+@media all and (max-width: 400px){
+    .clase-aside{
+        flex-direction:column;
+    }
+}

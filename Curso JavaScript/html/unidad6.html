@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/unidad6.css">
+    <script type="text/javascript" src="../js/unidad6.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Fuente de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Fuente de google -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> <!-- Fuente de google -->
+    <title>Curso de JavaScript - Unidad 6</title>
+</head>
+<body>
+
+    <h4 class="myh4">Curso de JavaScript</h4>
+
+        <nav>
+            <a href="inicio.html" class="nav-enlace">Inicio</a><a href="unidad1.html" class="nav-enlace">Unidad 1</a><a href="unidad2.html" class="nav-enlace">Unidad 2</a><a href="unidad3.html" class="nav-enlace">Unidad 3</a><a href="unidad4.html" class="nav-enlace">Unidad 4</a><a href="unidad5.html" class="nav-enlace">Unidad 5</a><a href="unidad6.html" class="nav-enlace">Unidad 6</a><a href="unidad7.html" class="nav-enlace">Unidad 7</a><a href="unidad8.html" class="nav-enlace">Unidad 8</a><a href="unidad9.html" class="nav-enlace">Unidad 9</a>
+        </nav>
+	
+		<h1>Unidad 6</h1>
+
+        <script type="text/javascript">
+
+            var body = document.getElementsByTagName("body");
+            body[0].style.backgroundColor = "#323232";
+
+            function myFunction(x){
+                x.style.background = "#5e454b";
+            }
+
+            function myFunction2(x){
+                x.style.background = "#FFFFFF";
+            }
+
+        </script>
+
+        <p ondblclick="alert('Doble click enabled.')">Doble click</p>
+        <input name="boton1" value="Random botton" type="button" onclick="alert('onclick action by clicking.')">
+        <br>
+        <br>
+        <!-- "this" indica que las cosas de la function "myFunction" se aplican en este lugar, en este caso este input -->
+        <input onfocus="myFunction(this)" onblur="myFunction2(this)"><p>Al clickear cambia el color</p>
+        <input onmousemove="myFunction(this)" onmouseout="myFunction2(this)"><p>Funciona como un Hover del CSS</p>
+
+        <br>
+        <hr>
+        <br>
+
+        <script>
+
+            function secondFunction(){
+                document.getElementById("mensaje").innerHTML = "Reseteado";
+            }
+            document.getElementById("Form").onreset = function() {secondFunction()};
+            /* Aca indico que cuando se ejecute la accion ".onreset", que es la que esta en "<input type=reset", que es la que esta en el id "Form", ejecute la funcion "secondFunction", que hace que se escriba "reseteado", usando el id que tiene la p. */
+
+        </script>
+
+        <form onreset="secondFunction()" id="Form">
+            Enter name: <input type="text">
+            Enter name: <input type="text">
+            Enter name: <input type="text">
+            <input type="reset">
+        </form>
+        <p id="mensaje"></p>
+
+        <br>
+        <hr>
+        <br>
+
+        <script type="text/javascript">
+
+            var userNumber = prompt("Ingresar numero para luego calcularle el IVA.");
+            document.write("<p>Numero ingresado: "+userNumber+"</p>");
+
+        </script><br>
+
+        <input type="button" id="input1" value="Calcular IVA" onclick="iva(userNumber)">
+        <input type="button" id="input2" value="Sin IVA" onclick="sinIva()">
+        <br>
+        <p id="p-tag"></p>
+        <br>
+        <a href="unidad6.html">Recargar pagina.</a>
+	
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/unidad9.css">
+    <script type="text/javascript" src="../js/unidad9.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Fuente de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Fuente de google -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> <!-- Fuente de google -->
+    <title>Curso de JavaScript - Unidad 9</title>
+</head>
+<body>        <!-- En Mozilla se ve bien pero en Chrome no, no entiendo porque -->
+
+  <h4 class="myh4">Curso de JavaScript</h4>
+
+        <nav>
+          <a href="inicio.html" class="nav-enlace">Inicio</a><a href="unidad1.html" class="nav-enlace">Unidad 1</a><a href="unidad2.html" class="nav-enlace">Unidad 2</a><a href="unidad3.html" class="nav-enlace">Unidad 3</a><a href="unidad4.html" class="nav-enlace">Unidad 4</a><a href="unidad5.html" class="nav-enlace">Unidad 5</a><a href="unidad6.html" class="nav-enlace">Unidad 6</a><a href="unidad7.html" class="nav-enlace">Unidad 7</a><a href="unidad8.html" class="nav-enlace">Unidad 8</a><a href="unidad9.html" class="nav-enlace">Unidad 9</a>
+        </nav>
+  
+    <form action="evaluacion9_platia.html" name="maform" id="myform">
+      <h3>Registro</h3>
+      <br>
+      <label>Nombre</label>
+      <br>
+      <br>
+      <input type="text" name="manombre" id="nombre" maxlength="15" title="No se porque en Chrome se ve mal, en Mozilla se ve bien.">
+      <br>
+      <br>
+      <label>Edad</label>
+      <br>
+      <br>
+      <input type="number" name="maedad" id="edad" min="18" max="99">
+      <br>
+      <br>
+      <lablel>Email</lablel>
+      <br>
+      <br>
+      <input type="email" name="mamail" id="mail" title="Dont AFK.">
+      <br>
+      <br>
+      <input type="submit" id="btn-submit" value="Confirmar" title="C L I C K  I T">
+
+    </form>
+    <!-- <div id="error"></div> -->
+
+      <br>
+      <input type="button" id="button-1" value="Dobleclick acá para comenzar juego" onclick="toggle()">
+      <br>
+      <br>
+      <hr>
+      <br>
+
+      <div id="div-1">
+        <p>El juego consiste en atacar 1 de los 3 puntos que hay, si el rival defiende el punto atacado, se pierde. Si se ataca el punto que el rival no esta defendiendo se gana. El rival es impredecible asique puede estar defendiendo cualquier punto.</p>
+        <br>
+        <input type="button" value="Ingresar punto al cual atacar." onclick="atacar()">
+      </div>
+      <br>
+      <br>
+      <hr>
+      <br>
+        
+      <a href="unidad9.html">Recargar pagina.</a>
+
+</body>

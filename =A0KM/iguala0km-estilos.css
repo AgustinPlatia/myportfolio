@@ -1,0 +1,949 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-image:url(imagenes/navy-1.png);
+    /*background-attachment:fixed;*/    /* es para que la imagen de fondo quede fija EN el scroll AL hacer scroll*/
+    /*background:#2B2B2B;*/
+    line-height:127%;
+}
+
+  /* Al poner la coma, asigno las mismas propiedades a header, section y footer.. Si no pongo las comas, asigna las propiedades al footer que esté dentro de header y section*/
+
+header, section, footer{
+    width: 960px;
+    margin-left: auto;  /* Poner los margin left y right en auto los posiciona en el centro de la pagina*/
+    margin-right: auto;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header{
+    height: 120px;
+    background-image:url(imagenes/navy-1.png);
+    position:sticky;        /* "possition:sticky" en el "header" hace que el "header" se quede pegado en la parte "top:0px;" de la pagina, cuando hago scroll para abajo*/
+    top:0px;
+    z-index:500;            /* El formulario creado con JS tiene un "z-index" alto, entonces eso me hace ponerle un "z-index" mas alto, al header */
+}
+
+#brand{
+    background-image:url(imagenes/navy-1.png);
+    width:200px;
+    height:51px;
+    float:left;
+    margin-left:10px;
+    margin-top:48px;
+    border-radius:200px;
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+#nav-botones{
+    background-image:url(imagenes/navy-1.png);
+    width:700px;
+    height:40px;
+    margin-left:20px;
+    margin-top:65px;
+    float:left;
+}
+
+#nav-botones ul{
+    margin:0;
+    height:0;
+    list-style-type:none;
+}
+
+#nav-botones ul li{
+    display:inline;
+    padding:20px;
+}
+
+#nav-botones ul li a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    width:110px;
+    height:25px;
+    text-align:center;
+    line-height:25px;
+    margin-top:6px;
+    font-size:20px;
+    transition: background-color .2s;
+    border-radius:3px;                  /*este "border-radius" es para darle borde al hover cuando se desactive*/
+}
+
+#nav-botones ul li a:hover{
+    background:#ED5107;
+    border-radius:3px;
+    transition: background-color .2s;
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+#section1{
+    height:925px;
+    background-image:url(imagenes/navy-1.png);
+}
+
+#texto-izq-sec1{
+    background-image:url(imagenes/navy-1.png);
+    width:940px;
+    height:100px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:125px;          /* este "margin-top" tiene el mismo "height" que el header, para que cuando clickee en INICIO, el header no me tape parte de la caja */
+    margin-bottom:10px;
+    float:left;
+    padding:10px;
+    box-sizing:border-box;     /*"box-sizing:border-box" hace que el padding se aplique para adentro de la pagina teniendo en cuenta el width y height*/
+}
+
+#imagen-der-sec1{
+    background-image: url(imagenes/bmw-inside-a-bmw.jpg);
+    background-size:cover;     /* esto hace que la imagen se acomode al tamaño de la caja en donde esta */
+    width:940px;
+    height:680px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:5px;
+    clear:both;
+    background-position:center;
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+#section2{
+    height:1400px;
+    background-image:url(imagenes/navy-1.png);
+}
+
+#txt-izq-sec2{
+    background-image:url(imagenes/navy-1.png);
+    width:940px;
+    height:260px;
+    margin-left:10px;
+    margin-right:auto;
+    margin-top:125px;
+    margin-bottom:10px;
+    float:left;
+    padding:10px;
+    box-sizing:border-box;      /*"box-sizing:border-box" hace que el padding se aplique para adentro de la pagina teniendo en cuenta el width y height, de lo contrario panic attack*/
+}
+
+#ul-sec2{
+    margin:0px;
+    padding:0;
+    list-style-type:none;
+}
+
+#ul-sec2 li{
+    margin:5px;
+    text-align:center;
+    color:white;
+}
+
+#img-der-sec2{
+    background-image: url(imagenes/ka-interior-1-clean.jpg);
+    background-size:cover;
+    width:940px;
+    height:520px;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    border-radius:5px;
+    transition: background-image .2s;
+}
+
+#img-der-sec2:hover{
+    background-image:url(imagenes/ka-interior-1-dirt.jpg);
+    transition: background-image .2s;
+}
+
+#sec2-cajaizq{
+    background-image:url(imagenes/ka-interior-2-clean.jpg);
+    background-size:cover;
+    background-position:center;
+    width:460px;
+    height:465px;
+    float:left;
+    margin:10px;
+    border-radius:5px;
+    transition: background-image .2s;
+}
+
+#sec2-cajaizq:hover{
+    background-image:url(imagenes/ka-interior-2-dirt.jpg);
+    background-position:center;
+    transition: background-image .2s;
+}
+
+#sec2-cajader{
+    background-image:url(imagenes/ka-interior-3-clean.jpg);
+    background-size:cover;
+    width:460px;
+    height:465px;
+    float:left;
+    margin:10px;
+    border-radius:5px;
+    transition: background-image .2s;
+}
+
+#sec2-cajader:hover{
+    background-image:url(imagenes/ka-interior-3-dirt.jpg);
+    transition: background-image .2s;
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+#section3{
+    height:1060px;
+    background-image:url(imagenes/navy-1.png);
+}
+
+#sec3-txt-box{
+    background-image:url(imagenes/navy-1.png);
+    width:940px;
+    height:210px;
+    margin-left:10px;
+    margin-right:auto;
+    margin-top:125px;
+    margin-bottom:10px;
+    float:left;
+    padding:10px;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+
+#sec3-img-box{
+    background-image:url(imagenes/ka-exterior-1-clean.jpg);
+    background-size:cover;
+    width:940px;
+    height:700px;
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    border-radius:5px;
+    transition: background-image .2s;
+}
+
+#sec3-img-box:hover{
+    background-image:url(imagenes/ka-exterior-1-dirt.jpg);
+    transition: background-image .2s;
+}
+
+#ul-sec3{
+    margin:0px;
+    padding:0;
+    list-style-type:none;
+}
+    
+#ul-sec3 li{
+    margin:5px;
+    text-align:center;
+    color:white;
+}
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#section4{
+    background-image:url(imagenes/navy-1.png);
+    height:950px;
+}
+
+#sec4-txt-box{
+    background-image:url(imagenes/navy-1.png);
+    width:940px;
+    height:80px;
+    margin-left:10px;
+    margin-right:auto;
+    margin-top:125px;
+    margin-bottom:10px;
+    float:left;
+    padding:10px;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+
+#sec4-img-box{
+    background-image:url(imagenes/navy-1.png);
+    width:940px;
+    height:710px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+    clear:both;
+    box-sizing:border-box;
+    border-radius:5px;
+}
+
+.crazy-img{
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:5px;
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+h2{                           /*El h2 por defecto trae "margin", asique hay que sacarselo si se quiere*/
+    color:#ED5107;
+    text-align:center;
+    margin:0;
+    font-size:24px;
+    font-weight:bolder;
+}
+
+.h3custom{
+    color:#ED5107;
+    text-align:center;
+}
+
+.h2-footer{
+    color:#ED5107;
+    text-align:left;
+    font-size:20px;
+}
+
+p{
+    color:white;
+    text-align:center;
+    margin:10px;
+}
+
+.p-footer{
+    color:white;
+    text-align:left;
+    margin:0px;
+}
+
+ul{
+    padding-left:0px;
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+.brand-img-fix{               /*En la imagen uso "width" o "height", los 2 no, porque deforma la imagen y me daña la posicion en google*/
+    width:100%;
+    border-radius:200px;
+}
+
+.fix-img{
+    height:100%;              /* Este "class" es para modificar la imagen subida desde el html*/
+}
+
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+/*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+#menu-hamburguesa{
+    display:none;
+}
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+footer{
+    height: 130px;
+    background-image:url(imagenes/navy-1.png);
+}
+
+#datos{
+    background-image:url(imagenes/navy-1.png);
+    width:270px;
+    height:100px;
+    float:left;
+    margin-top:7px;
+    margin-left:18px;
+}
+
+#redes{
+    background-image:url(imagenes/navy-1.png);
+    width:300px;
+    height:50px;
+    float:right;
+    margin-top:5px;
+    margin-right:10px;
+}
+
+#redes a span{
+    font-size:35px;
+    margin:5px;
+    float:right;
+}
+
+#redes a{
+    text-decoration:none;
+}
+
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 1 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+/* en el "media" tengo que poner solo las cosas que quiero cambiar. Lo que no pongo en el media, se mantiene */
+
+@media all and (min-width:600px) and (max-width:1023px) {         
+    header, section, footer{
+        width:580px;
+    }
+
+    #brand{
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+        padding-top:10px;
+    }
+
+    #datos{
+        width:240px;
+    }
+
+    #redes{
+        width:200px;
+    }
+    
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    
+    #nav-botones{
+        width:580px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
+    }
+    
+    #nav-botones ul li{
+        padding:10px;
+    }
+
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+    #section1{
+        height:840px;
+    }
+
+
+    #texto-izq-sec1{
+        width:580px;
+    }
+    
+    #imagen-der-sec1{
+        width:580px;
+        margin-top:50px;
+        float:left;
+        height:540px;
+    }
+
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+    #section2{
+        height:1130px;
+    }
+
+    #txt-izq-sec2{
+        width:580px;
+        margin-top:130px;
+    }
+    
+    #img-der-sec2{
+        width:580px;
+        height:440px;
+    }
+    
+    #ul-sec2 li{
+        margin:2px;
+    }
+
+    #sec2-cajaizq{
+        width:285px;
+        height:265px;
+        margin-top:10px;
+        margin-right:10px;
+        margin-left:0px;
+        margin-bottom:10px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec2-cajaizq{
+        background-image:url(imagenes/ka-interior-2-clean.jpg);
+        background-size:cover;
+        width:460px;
+        height:465px;
+        float:left;
+        margin:10px;
+        border-radius:5px;
+    }
+    */
+
+    #sec2-cajader{
+        width:285px;
+        height:265px;
+        margin-top:10px;
+        margin-right:0px;
+        margin-left:0px;
+        margin-bottom:10px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec2-cajader{
+        background-image:url(imagenes/ka-interior-3-clean.jpg);
+        background-size:cover;
+        width:460px;
+        height:465px;
+        float:left;
+        margin:10px;
+        border-radius:5px;
+    }
+    */
+
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+    #section3{
+        height:780px;
+    }
+
+    #sec3-txt-box{
+        width:580px;
+        margin-left:auto;
+        height:230px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec3-txt-box{
+        background:#C87941;
+        width:940px;
+        height:260px;
+        margin-left:10px;
+        margin-right:auto;
+        margin-top:125px;
+        margin-bottom:10px;
+        float:left;
+        padding:10px;
+        box-sizing:border-box;
+        border-radius:5px;
+    }
+    */
+
+    #sec3-img-box{
+        width:580px;
+        height:400px;
+        background-position: center;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec3-img-box{
+        background:#87431D;
+        width:940px;
+        height:520px;
+        margin-left:auto;
+        margin-right:auto;
+        clear:both;
+        border-radius:5px;
+    }
+    */
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+    #section4{
+        height:670px;
+    }
+
+    #sec4-txt-box{
+        width:580px;
+        margin-top:80px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    
+    #sec4-txt-box{
+        background-image:url(imagenes/navy-1.png);
+        width:940px;
+        height:80px;
+        margin-left:10px;
+        margin-right:auto;
+        margin-top:125px;
+        margin-bottom:10px;
+        float:left;
+        padding:10px;
+        box-sizing:border-box;
+        border-radius:5px;
+    }
+    */
+
+    #sec4-img-box{
+        width:580px;
+        height:445px;
+        margin-bottom:0px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec4-img-box{
+        background-image:url(imagenes/navy-1.png);
+        width:940px;
+        height:710px;
+        margin-left:10px;
+        margin-right:auto;
+        margin-bottom:10px;
+        float:left;
+        padding:10px;
+        box-sizing:border-box;
+        border-radius:5px;
+    }
+    */
+
+}   /* esta llave cierra el media 1 */
+
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/* RESPONSIVE PART 2 - /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+@media all and (max-width: 599px) {         /* Se sigue tomando de referencia los elementos sin responsive */     /* El "max-width" de mi celular es 418px */
+
+    /* cuando uso % en el width, el height va en "auto" siempre y cuando la caja tenga contenido, si height tiene una img no se va a ver en "auto", en ese caso le doy "px" */
+
+    header, section, footer{
+        width:90%;
+    }
+
+    header{
+        height:auto;
+        top:0px;
+    }
+
+    section{
+        padding-top:20px;
+    }
+
+    #brand{
+        width:100%;
+        height:auto;
+        float:none;
+        margin-left:0px;
+    }
+
+    #datos{
+        width:240px;
+        height:50px;
+        float:none;
+        margin-left:70px;
+    }
+
+    #redes{
+        width:200px;
+        float:none;
+        margin-left:90px;
+        margin-right:0px;
+    }
+
+    .h2-footer{
+        text-align: center;
+    }
+
+    .p-footer{
+        text-align: center;
+    }
+
+    #redes a span{
+        float:none;
+        margin-left:40px;
+    }
+
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+    /* No es valido meter este menu solo en el "media" para evitar el uso del "display"... porque le tengo que dar estilos al icono y lo tengo que usar */
+
+    #menu-hamburguesa{
+        width:46px;
+        height:46px;
+        /*background:#87431D;*/
+        float:left;
+        display:block;
+    }
+    
+    #menu-hamburguesa a span{
+        font-size:45px;
+        color:#ED5107;
+    }
+
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+    #nav-botones{
+        width:100%;
+        height:auto;
+        margin-top:20px;
+        margin-left:auto;
+        margin-right:auto;
+        float:none;
+        border-style:solid;
+        border-color:#ED5107;
+        border-width:0px 0px 4px;
+    }
+
+    #nav-botones ul{
+        height:auto;
+        padding:0px;            /* IMPORTANTISIMO - PANIC ATTACK: "ul" viene con "padding" invisible, sino se lo saco EN el media, la "ul" se ve desalineada */
+    }
+ 
+    #nav-botones ul li{
+        display:block;
+        padding:1px;
+    }
+
+    #nav-botones ul li a{
+        width:100%;
+        height:auto;
+    }
+    
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+    #section1{
+        height:auto;
+    }
+
+    #texto-izq-sec1{
+        width:100%;
+        height:auto;
+        float:none;
+        margin-top:30px;
+        margin-left:0px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #texto-izq-sec1{
+        background-image:url(imagenes/navy-1.png);
+        width:940px;
+        height:100px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:125px;          
+        margin-bottom:10px;
+        float:left;
+        padding:10px;
+        box-sizing:border-box;
+    }
+    */
+
+    #imagen-der-sec1{
+        width:100%;
+        height:600px;
+        clear:none;
+        margin-top:10px;
+        background-position: center;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #imagen-der-sec1{
+        background-image: url(imagenes/bmw-inside-a-bmw.jpg);
+        background-size:cover;
+        width:940px;
+        height:680px;
+        margin-left:auto;
+        margin-right:auto;
+        border-radius:5px;
+        clear:both;
+        background-position:center;
+    }
+    */
+
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+    /*BUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMBUMB*/
+
+    #section2{
+        height:auto;
+    }
+
+    #txt-izq-sec2{
+        width:100%;
+        height:auto;
+        float:none;
+        margin-top:20px;
+        margin-left:0px;
+    }
+
+    #img-der-sec2{
+        width:100%;
+        height:480px;
+        clear:none;
+        margin-top:10px;
+        margin-bottom:20px;
+        background-position: center;
+    }
+
+    #sec2-cajaizq{
+        width:100%;
+        height:480px;
+        float:none;
+        margin:0px;
+        margin-bottom:20px;
+        background-position: center;
+    }
+
+/*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec2-cajaizq{
+        background-image:url(imagenes/ka-interior-2-clean.jpg);
+        background-size:cover;
+        width:460px;
+        height:465px;
+        float:left;
+        margin:10px;
+        border-radius:5px;
+    }
+    */
+
+    #sec2-cajader{
+        width:100%;
+        height:480px;
+        float:none;
+        margin:0px;
+        margin-bottom:20px;
+        background-position: center;
+    }
+
+/*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec2-cajader{
+        background-image:url(imagenes/ka-interior-3-clean.jpg);
+        background-size:cover;
+        width:460px;
+        height:465px;
+        float:left;
+        margin:10px;
+        border-radius:5px;
+    }
+    */
+
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+    #section3{
+        height:auto;
+    }
+
+    #sec3-txt-box{
+        width:100%;
+        height:auto;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:125px;
+        margin-bottom:10px;
+        float:none;
+        padding:10px;
+        box-sizing:border-box;
+        border-radius:5px;
+    }
+
+/*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec3-txt-box{
+        background:#C87941;
+        width:940px;
+        height:260px;
+        margin-left:10px;
+        margin-right:auto;
+        margin-top:125px;
+        margin-bottom:10px;
+        float:left;
+        padding:10px;
+        box-sizing:border-box;
+        border-radius:5px;
+    }
+    */
+
+    #sec3-img-box{
+        width:100%;
+        height:400px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:10px;
+        clear:none;
+        border-radius:5px;
+    }
+
+    /*
+
+    Elementos sin el responsive para tomar de referencia
+
+    #sec3-img-box{
+        background:#87431D;
+        width:940px;
+        height:520px;
+        margin-left:auto;
+        margin-right:auto;
+        clear:both;
+        border-radius:5px;
+    }
+    */
+
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+    /*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+    #section4{
+        height:auto;
+    }
+
+    #sec4-txt-box{
+        width:100%;
+        height:auto;
+    }
+
+    #sec4-img-box{
+        width:100%;
+        height:auto;
+    }
+
+
+
+
+
+
+
+
+
+
+}   /* esta llave cierra el media 2 */

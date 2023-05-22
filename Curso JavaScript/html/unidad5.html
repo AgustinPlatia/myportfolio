@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/unidad5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Fuente de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Fuente de google -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> <!-- Fuente de google -->
+    <title>Curso de JavaScript - Unidad 5</title>
+</head>
+<body>
+
+    <h4 class="myh4">Curso de JavaScript</h4>
+
+        <nav>
+            <a href="inicio.html" class="nav-enlace">Inicio</a><a href="unidad1.html" class="nav-enlace">Unidad 1</a><a href="unidad2.html" class="nav-enlace">Unidad 2</a><a href="unidad3.html" class="nav-enlace">Unidad 3</a><a href="unidad4.html" class="nav-enlace">Unidad 4</a><a href="unidad5.html" class="nav-enlace">Unidad 5</a><a href="unidad6.html" class="nav-enlace">Unidad 6</a><a href="unidad7.html" class="nav-enlace">Unidad 7</a><a href="unidad8.html" class="nav-enlace">Unidad 8</a><a href="unidad9.html" class="nav-enlace">Unidad 9</a>
+        </nav>
+	
+		<h1>Unidad 5</h1>
+
+        <a href="unidad5.html">Recargar pagina.</a>
+
+		<script type="text/javascript">
+			
+            var letras = ['T', 'R', 'W', 'I', 'U', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'A', 'O'];
+
+            var usuarioNumero = parseInt(prompt("Ingrese un numero entre 0 y 25."));
+            var usuarioLetra = prompt("Ingrese una letra en mayusculas.");
+            var win = "Ha ganado, la letra coincide con el numero ingresado."
+            var lose = "Ha perdido, la letra ingresada no es la que representa el numero ingresado. Volver a intentar."
+            var f5 = " Volver a intentar."
+
+            if (usuarioNumero <=0){
+                alert("MAL MAL MAL. El numero proporcionado es menor que 0.");
+                document.write("<h2>El numero proporcionado es menor que 0."+f5+"</h2>");
+            } else if(usuarioNumero >=25){
+                alert("MAL MAL MAL. El numero proporcionado es mayor a 25.");
+                document.write("<h2>El numero proporcionado es mayor a 25."+f5+"</h2>");
+            } else if(letras[usuarioNumero] === usuarioLetra){
+                document.write("<h2>"+win+"</h2>");
+            } else if(letras[usuarioNumero] !== usuarioLetra){
+                document.write("<h2>"+lose+"</h2>");
+            }
+
+            var h2 = document.getElementsByTagName("h2");
+            h2[0].style.color = "#FFFFFF";
+
+            var a = document.getElementsByTagName("a");
+            a[0].style.color ="#FFFFFF";
+            a[0].style.textDecoration = "none";
+
+		</script>
+
+        
+
+
+</body>
+</html>

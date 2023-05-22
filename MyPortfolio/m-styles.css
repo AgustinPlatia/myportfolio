@@ -1,0 +1,191 @@
+*{                          /* No es lo mismo poner * que html | Las propiedades que pongo aca se aplican en todos los elementos */
+    margin:0px;
+    padding:10px;
+    color:#ffffff;
+    box-sizing:border-box;
+    scroll-behavior:smooth; /* Click en los # es suave */
+}
+
+body{
+    background-color:#323232;
+    font-family: 'Quicksand', sans-serif;
+    display:flex;
+    flex-flow:column;
+    flex-wrap:nowrap;
+    /* Cuando pongo "display:flex;" hago que el contenido dentro de "body", por default se muestre uno al lado del otro, por lo tanto tengo que poner las otras 2 propiedades, "flex-flow:column;" y "flex-wrap:nowrap;" */
+}
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-header{
+            background-color:#323232;
+            display:flex;
+            position:sticky;      /* "possition:sticky" en el "header" hace que el "header" se quede pegado en la parte "top:0px;" de la pagina, cuando hago scroll para abajo*/
+            height:70px;          /* 70 es el default o minimo. poner 70 como margin-top en los divs (no en los sections) hacia donde te tpea asi el header no lo tapa */
+            top:0px;
+            padding-bottom:0px;
+}
+    
+        #menu{
+            background-color:#323232;
+            display:flex;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            flex-basis:100%;
+            height:60px;
+            align-items:center;         /* esta propiedad hace que las cajas que estan dentro de menu, se posicionen en el centro de la caja, no al principio */
+            border-bottom:2px solid #ff8800; /* el 0.5 es el degradado / transparentado / alpha como el crosshair */
+        }
+
+            .custom-a-1{
+                color:#ffffff;
+                text-transform: uppercase;
+                font-weight:bold;
+                letter-spacing: 2px;
+                padding:0 10px;          /* El 0 indica el pading arriba y abajo y el 10 indica a los costados */
+                text-decoration: none;
+                transition:.6s;
+            }
+
+            .custom-a-1:hover{
+                color:#ff8800;
+                transition:.2s;
+            }
+
+            .nav{
+                flex: 5 1 auto;         /* Al poner 5 hago que la clase nav sea 5 veces mas grande en tamaño */
+                display:flex;
+                justify-content:space-evenly;
+            }
+
+            .p-start{
+                font-weight:bold;
+                text-align:start;
+            }
+
+            .p-center{
+                font-weight:bold;
+                text-align:center;
+            }
+
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-section-1{
+    display:flex;
+    justify-content:center;
+    height:930px;
+}
+
+    .div1s1{
+        display:flex;
+        flex-wrap:nowrap;
+        align-items:center;
+        margin-top:70px;
+        width:730px;
+    }
+
+    .mypic{
+        border-radius:30px;
+        height:400px;
+    }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-section-2{
+    display:flex;
+    justify-content:center;
+    height:930px;
+}
+
+    .div1s2{
+        display:flex;
+        flex-wrap:nowrap;
+        flex-direction:column;
+        align-items:center;
+        margin-top:230px;
+        width:670px;
+    }
+
+    .cursoslogos{
+        height:200px;
+        border-radius:15px;
+    }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+
+#id-section-3{
+    display:flex;
+    justify-content:center;
+    height:930px;
+}
+
+    .div1s3{
+        display:flex;
+        flex-wrap:nowrap;
+        flex-direction:column;
+        align-items:center;
+        margin-top:230px;
+        width:1700px;
+    }
+
+    .div2s3{
+        display:flex;
+        flex-wrap:nowrap;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        width:1600px;
+    }
+
+    .m-div{
+        border:1px solid #b9b9b9;
+        border-radius:7px;
+        margin:15px;
+        transition:.2s;
+    }
+
+    .m-div:hover{
+        background:#4f4f4f;
+        box-shadow:0px 0px 10px 5px #888;
+        transition:.2s;
+    }
+
+    .custom-a-2{
+        color:#ffffff;
+        font-weight:bold;
+        text-decoration:none;
+        transition:.2s;
+    }
+
+    .custom-a-2:hover{
+        color:#ff8800;
+        transition:.2s;
+    }
+
+    .custom-a-3{
+        padding:0px;
+
+    }
+
+    .myi{
+        transition:.2s;
+        padding:0px;
+    }
+
+    .myi:hover{
+        color:#ff8800;
+        transition:.2s;
+    }
+
+    .icons-div{
+        display:flex;
+
+    }
+
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/
+/*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*/

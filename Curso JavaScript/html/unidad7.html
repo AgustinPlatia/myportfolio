@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/unidad7.css">
+    <script src="unidad7.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Fuente de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Fuente de google -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> <!-- Fuente de google -->
+    <title>Curso de JavaScript - Unidad 7</title>
+</head>
+<body>
+
+    <h4 class="myh4">Curso de JavaScript</h4>
+
+        <nav>
+            <a href="inicio.html" class="nav-enlace">Inicio</a><a href="unidad1.html" class="nav-enlace">Unidad 1</a><a href="unidad2.html" class="nav-enlace">Unidad 2</a><a href="unidad3.html" class="nav-enlace">Unidad 3</a><a href="unidad4.html" class="nav-enlace">Unidad 4</a><a href="unidad5.html" class="nav-enlace">Unidad 5</a><a href="unidad6.html" class="nav-enlace">Unidad 6</a><a href="unidad7.html" class="nav-enlace">Unidad 7</a><a href="unidad8.html" class="nav-enlace">Unidad 8</a><a href="unidad9.html" class="nav-enlace">Unidad 9</a>
+        </nav>
+	
+		<h1>Unidad 7</h1>
+        <br>
+
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+
+        <script>
+
+            function iniciar (){
+                edad=document.getElementById("miedad"); // almacenamos el input/id "miedad" en la variable edad.
+                edad.addEventListener("change", cambiarrango, false); // le agregamos el evento que cuando surja un cambio, se ejecute la funcion "cambiarrango".
+                document.informacion.addEventListener("invalid", validacion, true); //se agrega un evento al formulario (etiqueta form, con name=informacion). evento: cuando sea invalido ("invalid") que de error. Es invalido cuando cualquier info ingresada sea erronea (pattern y required marcan las reglas). Si es invalido (true), se ejecuta la funcion validacion, marcando con color lo que esta mal.
+                document.getElementById("enviar").addEventListener("click", enviar, false); // al boton con id "enviar" le agrego un evento (addEventListener). evento: cuando hago click se ejecuta la function enviar.
+            }
+
+            function cambiarrango(){
+                var salida=document.getElementById("rango"); // almacenamos el input/id "rango" en la variable salida.
+                var calc=edad.value-20; // esta variable es: del valor original que tiene, se le resta 20.
+                if (calc<20){ // si el valor es menor a 20, "edad.value=20" hace que el minimo sea 20.
+                    calc=0;
+                    edad.value=20;
+                }
+                salida.innerHTML=calc+" a "+edad.value; // muestra
+            }
+
+            function validacion (e){
+                var elemento = e.target; // esto marca la parte que este mal del form, en este caso poniendole el color de abajo
+                elemento.style.background = "#E23E57";
+            }
+
+            function enviar(){
+                var valido = document.informacion.checkValidity();
+                if (valido){
+                    document.informacion.submit();
+                }
+            }
+
+            window.addEventListener("load", iniciar, false); // Este evento pone en funcionamiento el codigo de arriba. No hay que poner este evento antes del script, porque primero tiene que existir el script para despues iniciarlo.
+
+        </script>
+
+        <form name="informacion" method="get">
+            User:
+            <input pattern="[A-Za-z]{3,}" name="usuario" id="usuario" maxlength="10" required>
+            <!-- "[A-Za-z]" Acepta letras mayusculas y minusculas. Y "{3,}" minimo 3 digitos -->
+            <br>
+            <br>
+            Email:
+            <input type="email" name="miemail" id="miemail" required>
+            <!-- el type email hace que lo ingresado en ese campo sea, letras arroba letras. -->
+            <br>
+            <br>
+            Rango de edad:
+            <input type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
+            <!-- este input es el slider, el min es 0, el max es 80 y al moverlo se mueve de a 20. -->
+            <br>
+            <br>
+            <output id="rango">0 a 20</output>
+            <br>
+            <br>
+            <input type="button" id="enviar" value="ingresar">
+        </form>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+
+        <script>
+
+            function iiniciar (){
+            nombre1=document.getElementById("nnombre");
+            email1=document.getElementById("eemail");
+            nombre1.addEventListener("input",vvalidatenombre, true); // Si no pongo "true", es lo mismo a que SI esté.
+            email1.addEventListener("input",vvalidateemail, true);
+            }
+
+            function vvalidatenombre(){
+                if(nombre1.value>5){
+                    nombre1.setCustomValidity('Valor ingresado mayor a 5');
+                    nombre1.style.background = '#b4846c';
+            }
+            
+            else if(nombre1.value=='a'){
+                    nombre1.setCustomValidity('Escribiste: a');
+                    nombre1.style.background = '#FFDDDD';
+            }
+            }
+
+            function vvalidateemail(){
+                if(email1.value==''){
+                    email1.setCustomValidity('No dejes el campo vacio.');
+                    email1.style.background = '#F58840';
+            }
+
+            function eenviar(){
+                var validoo = document.formy.checkValidity();
+                if (validoo){
+                    document.formy.submit();
+                }
+            }
+
+            }
+            window.addEventListener("load", iiniciar, false);
+
+        </script>
+
+        <form id="formy" method="GET">
+    
+            <label>Nombre Completo</label>
+            <br>
+            <br>
+            <input type="text" id="nnombre"required>
+            <br>
+            <br>
+            <label>Tu correo electronico</label>
+            <br>
+            <br>
+            <input type="email" id="eemail" required>
+            <br>
+            <br>
+            <input type="submit" id="eenviar" value="Enviar">
+
+        </form>
+
+        <br>
+        <br>
+        <hr>
+        <br>
+
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+
+<form id="forum" method="get">
+
+    <label>Marca del auto</label>
+    <br>
+    <input type="text" pattern="[a-Za-z]{2,10}" title="Ejemplo: Williams - Astonmartin - Ferrari" id="brand" name="brand" required>
+    <br>
+    <br>
+    <label>Nombre del auto</label>
+    <br>
+    <input type="text" id="carname" name="carname" required>
+    <br>
+    <br>
+    <label>Año del auto</label>
+    <br>
+    <input type="number" pattern="[0-9]{4,}" minlength="4" maxlength="4" id="caryear" name="caryear" required>
+    <br>
+    <br>
+    <label>Su email</label>
+    <br>
+    <input type="email" id="useremail" name="usermail" required>
+    <br>
+    <br>
+    <input type="submit" value="send" id="sendbutton">
+    <br>
+    <br>
+
+</form>
+<br>
+
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+<!-- BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB -->
+
+<script>
+
+    const input = document.querySelector('input');
+    
+    const log = document.getElementById('log');
+    
+    
+    input.addEventListener('invalid', logValue);
+    
+    
+    function logValue(e) {
+    
+    if(e.srcElement.value >10){
+      log.textContent = "El numero : "+e.srcElement.value+" es mayor a 10";
+    }
+    
+    else if(e.srcElement.value <1){
+      log.textContent = "El numero : "+e.srcElement.value+" es menor a 1";
+    }
+    }
+
+    </script>
+
+    <form action="#">
+
+        <ul>
+
+          <li><label>Ingresar un numero entre 1 y 10: <input type="number" min="1" max="10" required></label></li>
+
+          <li><input type="submit" value="submit"></li>
+
+        </ul>
+
+      </form><p id="log"></p>
+      <br>
+      <a href="unidad7.html">Recargar pagina.</a>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/unidad4.css">
+    <script type="text/javascript" src="../js/unidad4.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Fuente de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Fuente de google -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> <!-- Fuente de google -->
+    <title>Curso de JavaScript - Unidad 4</title>
+</head>
+<body>
+
+    <h4 class="myh4">Curso de JavaScript</h4>
+
+        <nav>
+            <a href="inicio.html" class="nav-enlace">Inicio</a><a href="unidad1.html" class="nav-enlace">Unidad 1</a><a href="unidad2.html" class="nav-enlace">Unidad 2</a><a href="unidad3.html" class="nav-enlace">Unidad 3</a><a href="unidad4.html" class="nav-enlace">Unidad 4</a><a href="unidad5.html" class="nav-enlace">Unidad 5</a><a href="unidad6.html" class="nav-enlace">Unidad 6</a><a href="unidad7.html" class="nav-enlace">Unidad 7</a><a href="unidad8.html" class="nav-enlace">Unidad 8</a><a href="unidad9.html" class="nav-enlace">Unidad 9</a>
+        </nav>
+	
+		<h1>Unidad 4</h1>
+		<h2>Primer título</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est nisl, auctor eu nunc vitae, ornare vehicula nunc. Praesent eros nisl, rhoncus in feugiat mattis, ultrices id libero. Vestibulum urna nisl, hendrerit vel libero at, consequat sollicitudin est. Etiam volutpat posuere pulvinar. Quisque sit amet metus et erat hendrerit luctus. Suspendisse nec diam urna. Proin dignissim eros vel lorem fermentum vestibulum. Integer rutrum ut arcu sed feugiat. Morbi id congue enim. Maecenas sollicitudin molestie erat. Maecenas rhoncus urna elementum felis posuere, ut elementum dui tincidunt. Phasellus pulvinar odio sed arcu laoreet, quis mattis nisl laoreet.</p>
+
+<p>Sed eu rhoncus est, et elementum nisi. Phasellus feugiat mauris a placerat vehicula. Vestibulum faucibus mi nec nisl maximus vehicula. Duis eget odio odio. Maecenas fringilla nisi ut metus tincidunt, sit amet ultricies odio pretium. Duis interdum, leo in lobortis feugiat, nisi nisi mollis diam, et fermentum mi urna eget turpis. Vestibulum scelerisque eleifend efficitur. Sed ornare eu nisi vel molestie. Sed egestas leo nec tellus volutpat, nec maximus quam condimentum.</p>
+
+<h2>Segundo Título</h2>
+<p>Nullam quis sollicitudin erat. Suspendisse malesuada nisl at ex elementum lobortis. Aliquam tempus, odio sit amet finibus congue, dolor massa finibus nibh, id tempus libero ipsum lacinia nunc. Donec erat lorem, consequat a justo non, bibendum ornare ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ut leo sit amet ligula gravida lobortis sit amet aliquet turpis. Integer eu tellus ut sapien vulputate fermentum. Ut vestibulum venenatis dui, vel pharetra lectus malesuada at. Pellentesque mattis diam sapien, eget volutpat elit mattis quis. Curabitur hendrerit dapibus lectus aliquam auctor. Ut arcu dolor, vestibulum sit amet congue ac, aliquam et lectus. Integer ut blandit nibh, eget lobortis metus. Suspendisse at leo hendrerit, faucibus erat a, posuere lacus. Aliquam erat volutpat.</p>
+
+<p id="destacado">Morbi vel nisl nulla. Nulla et magna at sem pretium tincidunt vel sit amet dui. Aenean ex mi, molestie a accumsan non, ornare quis sem. Mauris eleifend nisl ac turpis lobortis consequat. Morbi id scelerisque odio. Quisque varius varius augue in vehicula. Suspendisse mattis tortor ligula, molestie maximus enim gravida at.</p>
+
+<p>Mauris vehicula elementum nulla, vitae euismod ipsum tincidunt ut. Praesent fringilla lectus et mi elementum cursus. Ut vitae tortor eget est dictum ultricies. Nullam imperdiet volutpat ligula. Vivamus at enim vel nulla mattis sodales tincidunt a libero. Quisque imperdiet suscipit ante, ut feugiat massa elementum in. Ut id cursus turpis. Etiam laoreet aliquam risus eget dignissim. Aliquam in odio est. Integer non purus metus. Praesent lorem odio, vestibulum ac turpis et, luctus efficitur diam. Etiam id enim eu nisi dapibus fringilla eget nec ex.</p>
+		<script type="text/javascript">
+			var body = document.getElementsByTagName("body");
+            body[0].style.backgroundColor = "#323232";
+
+            var p = document.getElementsByTagName("p");             // aca le cambio el color a todas las etiquetas p
+            for (var i = 0; i<p.length; i++){
+                p[i].style.color = "#FFFFFF";
+            }
+
+            var id = document.getElementById("destacado");          // no hace falta que la variable se llame id. Al id "destacado" le modifico el font-size
+            id.style.fontSize = "24px";
+
+            var titulos = document.getElementsByTagName("h2");      // aca le cambio el color y la fuenta a todas las etiquetas h2
+            for (var i = 0; i<2; i++){
+                titulos[i].style.fontFamily = "arial";
+                titulos[i].style.color = "#FFFFFF";
+            }
+
+            var vinculo = document.createElement("a");              // aca creo la etiqueta a.
+            vinculo.setAttribute("href", "https://www.lipsum.com");
+            var contenido = document.createTextNode("lipsum");      // lipsum es el texto que tiene adentro la etiqueta a
+            vinculo.appendChild(contenido);                         // aca vinculo el texto con la etiqueta, marcandole que el texto esta dentro de la etiqueta a
+            document.body.appendChild(vinculo);                     // aca vinculo la etiqueta con el body, marcandole que la etiqueta esta dentro del body
+
+            var vinculo = document.getElementsByTagName("a");
+            vinculo[0].style.color = "#903749";                     // siempre tengo que especificar el numero del elemento, en este caso 0, porque hay 1 solo a.
+		</script>
+	
+</body>
+</html>
